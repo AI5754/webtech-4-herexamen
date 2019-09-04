@@ -2,6 +2,6 @@
 <br />
 <ul>
   {% for q in quote_list %}
-  <li>{{ q }}</li>
+  <li>{{ q.street }} {{ q.speed_limit }} {{ q.infractions_speed }}</li>
   {% endfor %}
 </ul>
