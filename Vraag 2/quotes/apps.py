@@ -15,8 +15,9 @@ class QuotesConfig(AppConfig):
     name = 'quotes'
 
     def ready(self):
+        print(BASE_DIR)
         data_folder = os.path.join(
-            BASE_DIR, 'import_data', 'resources/json_file')
+            BASE_DIR, 'infractions', 'resources/json_file')
         for data_file in os.listdir(data_folder):
             with open(os.path.join(data_folder, data_file), encoding='utf-8') as data_file:
                 data = json.loads(data_file.read())
